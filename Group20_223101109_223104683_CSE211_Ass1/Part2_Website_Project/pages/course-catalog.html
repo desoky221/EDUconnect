@@ -1,0 +1,388 @@
+<!--
+AI Tools Usage:
+AI tools (ChatGPT/Claude) were used to generate and refine the internal text content throughout this page,
+including paragraph text, course descriptions, features, and other textual content within HTML elements.
+All HTML structure, semantic elements, and code implementation were written manually.
+And it helps in debugging the code and make it more readable and maintainable.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse our extensive catalog of web programming and computer science courses.">
+    <meta name="author" content="youssef ahmed/223101109 - abdallah mahdy/223104683">
+
+    <title>Course Catalog - EduConnect</title>
+</head>
+<body style="font-family: Arial, Helvetica, sans-serif;">
+
+    <!-- ========== HEADER SECTION ========== -->
+    <header>
+            <img src="../images/logo.jpg" alt="EduConnect Logo" width="200" height="100">
+        <h1>EduConnect</h1>
+
+        <nav id="main-nav" aria-label="Main navigation">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="course-catalog.html">Course Catalog</a></li>
+                <li><a href="student-dashboard.html">Student Dashboard</a></li>
+                <li><a href="registration.html">Registration</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+                <li><a href="https://www.gu.edu.eg/" target="_blank" rel="noopener noreferrer">University Site</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- ========== END HEADER ========== -->
+
+    <!-- ========== BREADCRUMB SECTION ========== -->
+     <hr>
+    <nav aria-label="breadcrumb">
+        <a href="../index.html">Home</a> &gt; Course Catalog
+    </nav>
+    <hr>
+    <!-- ========== END BREADCRUMB ========== -->
+
+    <!-- ========== MAIN CONTENT SECTION ========== -->
+    <main>
+
+        <section>
+            <h2>Course Catalog</h2>
+
+            <form action="#" method="get">
+                <label for="catalogSearch">Search Courses:</label>
+                <input type="text" id="catalogSearch" name="q" placeholder="e.g. JavaScript...">
+                <button type="submit">Search</button>
+            </form>
+
+            <hr>
+
+            <form action="#" method="get">
+                <label for="sort">Sort by:</label>
+                <select id="sort" name="sort">
+                    <option value="popularity">Popularity</option>
+                    <option value="price_low">Price: Low to High</option>
+                    <option value="price_high">Price: High to Low</option>
+                    <option value="rating">Rating</option>
+                    <option value="newest">Newest</option>
+                </select>
+                <button type="submit">Sort</button>
+                <span> | Showing <strong>6</strong> courses</span>
+            </form>
+        </section>
+
+        <hr>
+
+        <aside>
+            <h2>Filter Options</h2>
+            <form action="#" method="get">
+
+                <fieldset>
+                    <legend>Category</legend>
+                    <input type="checkbox" id="cat_web" name="category[]" value="web">
+                    <label for="cat_web">Web Development</label><br>
+                    <input type="checkbox" id="cat_data" name="category[]" value="data">
+                    <label for="cat_data">Data Science</label><br>
+                    <input type="checkbox" id="cat_design" name="category[]" value="design">
+                    <label for="cat_design">Web Design</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Level</legend>
+                    <input type="radio" id="lvl_beg" name="level" value="beginner">
+                    <label for="lvl_beg">Beginner</label><br>
+                    <input type="radio" id="lvl_int" name="level" value="intermediate">
+                    <label for="lvl_int">Intermediate</label><br>
+                    <input type="radio" id="lvl_adv" name="level" value="advanced">
+                    <label for="lvl_adv">Advanced</label>
+                </fieldset>
+
+                <p>
+                    <label for="duration">Duration:</label><br>
+                    <select id="duration" name="duration">
+                        <option value="">Any Duration</option>
+                        <option value="short">0-4 Weeks</option>
+                        <option value="medium">1-3 Months</option>
+                        <option value="long">3+ Months</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="rating">Minimum Rating:</label><br>
+                    <span>1</span>
+                    <input type="range" id="rating" name="rating" min="1" max="5" step="0.5" list="rating-markers">
+                    <span>5</span>
+
+                    <datalist id="rating-markers">
+                        <option value="1"></option>
+                        <option value="2"></option>
+                        <option value="3"></option>
+                        <option value="4"></option>
+                        <option value="5"></option>
+                    </datalist>
+                </p>
+
+                <button type="submit">Apply Filters</button>
+            </form>
+        </aside>
+
+        <hr>
+
+        <section>
+            <h2>Available Courses</h2>
+
+            <article>
+                <figure>
+                    <img src="../images/courses/webdev.jpg" alt="Web Development Course" width="300">
+                    <figcaption>Full Stack Web Development</figcaption>
+                </figure>
+                <h3>Web Development Fundamentals</h3>
+                <p>Learn HTML5, CSS3, and JavaScript from scratch to build modern websites.</p>
+                <p><strong>Instructor:</strong> Dr. Samy Ghoniemy</p>
+
+                <dl>
+                    <dt>Duration:</dt> <dd>8 Weeks</dd>
+                    <dt>Level:</dt> <dd>Beginner</dd>
+                    <dt>Price:</dt> <dd>$199.99</dd>
+                </dl>
+
+                <p>Rating: ★★★★★ (5.0)</p>
+
+                <h4>Features:</h4>
+                <ul>
+                    <li>Responsive Design</li>
+                    <li>DOM Manipulation</li>
+                    <li>Final Project Included</li>
+                </ul>
+
+                <p><a href="course-detail.html">View Details</a></p>
+            </article>
+
+            <hr>
+
+            <article>
+                <figure>
+                    <img src="../images/courses/webdesign.jpg" alt="Web Design Course" width="300">
+                    <figcaption>UI/UX Design Masterclass</figcaption>
+                </figure>
+                <h3>UI/UX &amp; Web Design</h3>
+                <p>Master Figma and Adobe XD to create stunning user interfaces.</p>
+                <p><strong>Instructor:</strong> Dr. Samy Ghoniemy</p>
+
+                <dl>
+                    <dt>Duration:</dt> <dd>6 Weeks</dd>
+                    <dt>Level:</dt> <dd>Intermediate</dd>
+                    <dt>Price:</dt> <dd>$149.99</dd>
+                </dl>
+
+                <p>Rating: ★★★★★ (4.8)</p>
+
+                <h4>Features:</h4>
+                <ul>
+                    <li>Wireframing</li>
+                    <li>Prototyping</li>
+                    <li>Color Theory</li>
+                </ul>
+
+                <p><a href="course-detail.html">View Details</a></p>
+            </article>
+
+            <hr>
+
+            <article>
+                <figure>
+                    <img src="../images/courses/database.jpg" alt="Database Course" width="300">
+                    <figcaption>SQL &amp; Database Management</figcaption>
+                </figure>
+                <h3>Database Management Systems</h3>
+                <p>Learn relational database design, SQL queries, and MySQL administration.</p>
+                <p><strong>Instructor:</strong> Dr. moahmed abdelazez</p>
+
+                <dl>
+                    <dt>Duration:</dt> <dd>10 Weeks</dd>
+                    <dt>Level:</dt> <dd>Advanced</dd>
+                    <dt>Price:</dt> <dd>$249.99</dd>
+                </dl>
+
+                <p>Rating: ★★★★☆ (4.7)</p>
+
+                <h4>Features:</h4>
+                <ul>
+                    <li>Complex Queries</li>
+                    <li>Normalization</li>
+                    <li>Data Security</li>
+                </ul>
+
+                <p><a href="course-detail.html">View Details</a></p>
+            </article>
+
+            <hr>
+
+            <article>
+                <figure>
+                    <img src="../images/courses/python.png" alt="Python Course" width="300">
+                    <figcaption>Python for Beginners</figcaption>
+                </figure>
+                <h3>Python Programming</h3>
+                <p>Start your coding journey with the most popular programming language.</p>
+                <p><strong>Instructor:</strong> Dr. shakir</p>
+
+                <dl>
+                    <dt>Duration:</dt> <dd>5 Weeks</dd>
+                    <dt>Level:</dt> <dd>Beginner</dd>
+                    <dt>Price:</dt> <dd>$99.99</dd>
+                </dl>
+
+                <p>Rating: ★★★★★ (4.9)</p>
+
+                <h4>Features:</h4>
+                <ul>
+                    <li>Data Structures</li>
+                    <li>Algorithms</li>
+                    <li>Automation Scripts</li>
+                </ul>
+
+                <p><a href="course-detail.html">View Details</a></p>
+            </article>
+
+            <hr>
+
+            <article>
+                <figure>
+                    <img src="../images/courses/datascince.jpg" alt="Data Science Course" width="300">
+                    <figcaption>Data Science Bootcamp</figcaption>
+                </figure>
+                <h3>Data Science &amp; Analytics</h3>
+                <p>Analyze big data using Pandas, NumPy, and Matplotlib.</p>
+                <p><strong>Instructor:</strong> Dr. shakir</p>
+
+                <dl>
+                    <dt>Duration:</dt> <dd>12 Weeks</dd>
+                    <dt>Level:</dt> <dd>Advanced</dd>
+                    <dt>Price:</dt> <dd>$299.99</dd>
+                </dl>
+
+                <p>Rating: ★★★★☆ (4.6)</p>
+
+                <h4>Features:</h4>
+                <ul>
+                    <li>Machine Learning</li>
+                    <li>Data Visualization</li>
+                    <li>Statistical Analysis</li>
+                </ul>
+
+                <p><a href="course-detail.html">View Details</a></p>
+            </article>
+
+            <hr>
+
+            <article>
+                <figure>
+                    <img src="../images/courses/marketing.webp" alt="Marketing Course" width="300">
+                    <figcaption>Digital Marketing</figcaption>
+                </figure>
+                <h3>Digital Marketing Strategy</h3>
+                <p>Learn SEO, SEM, and Social Media Marketing strategies.</p>
+                <p><strong>Instructor:</strong> Dr. rashed refaat</p>
+
+                <dl>
+                    <dt>Duration:</dt> <dd>4 Weeks</dd>
+                    <dt>Level:</dt> <dd>Beginner</dd>
+                    <dt>Price:</dt> <dd>$129.99</dd>
+                </dl>
+
+                <p>Rating: ★★★★☆ (4.4)</p>
+
+                <h4>Features:</h4>
+                <ul>
+                    <li>SEO Optimization</li>
+                    <li>Content Strategy</li>
+                    <li>Analytics</li>
+                </ul>
+
+                <p><a href="course-detail.html">View Details</a></p>
+            </article>
+
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Course Comparison</h2>
+            <table border="1">
+                <caption>Comparison of Top Rated Courses</caption>
+                <thead>
+                    <tr>
+                        <th>Course Name</th>
+                        <th>Price</th>
+                        <th>Duration</th>
+                        <th>Level</th>
+                        <th>Rating</th>
+                        <th>Enrollment</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Web Development Fundamentals</td>
+                        <td>$199.99</td>
+                        <td>8 Weeks</td>
+                        <td>Beginner</td>
+                        <td>4.5</td>
+                        <td>1,500</td>
+                    </tr>
+                    <tr>
+                        <td>UI/UX &amp; Web Design</td>
+                        <td>$149.99</td>
+                        <td>6 Weeks</td>
+                        <td>Intermediate</td>
+                        <td>4.8</td>
+                        <td>850</td>
+                    </tr>
+                    <tr>
+                        <td>Database Management Systems</td>
+                        <td>$249.99</td>
+                        <td>10 Weeks</td>
+                        <td>Advanced</td>
+                        <td>4.7</td>
+                        <td>1,200</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th colspan="5">Total Active Students Enrolled Across These Courses</th>
+                        <td><strong>3,550</strong></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+    </main>
+    <!-- ========== END MAIN CONTENT ========== -->
+    <hr>
+    <!-- ========== FOOTER SECTION ========== -->
+    <footer>
+        <div class="footer-content">
+            <p>
+                <a href="about.html">About Us</a> |
+                <a href="contact.html">Contact</a> |
+                <a href="#">Privacy Policy</a> |
+                <a href="#">Terms of Service</a>
+            </p>
+
+            <p>Email: <a href="mailto:info@gu.edu.eg">info@gu.edu.eg</a></p>
+
+            <p>
+                Follow us:
+                <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a> |
+                <a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a> |
+                <a href="https://twitter.com" target="_blank" rel="noopener">Twitter</a>
+            </p>
+
+            <p> &copy; 2025 EduConnect. All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- ========== END FOOTER ========== -->
+
+</body>
+</html>

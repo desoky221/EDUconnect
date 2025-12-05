@@ -1,0 +1,13 @@
+{
+  "html.validate.styles": false,
+  "htmlhint.enable": true,
+  "htmlhint.options": {
+    "no-inline-style": "off"
+  },
+  "html.customData": [],
+  "html.format.enable": true,
+  "html.lint": {
+    "no-inline-style": "off"
+  }
+}
+
